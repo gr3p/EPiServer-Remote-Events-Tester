@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Global", ".Global", "{C5918E86-D166-42B1-B6EF-6AD1685B1EB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeAnalysis", "CodeAnalysis", "{E8B99074-0933-4BE3-8659-A579CCF3334C}"
+	ProjectSection(SolutionItems) = preProject
+		.Global\CodeAnalysis\All-Rules-As-Error.ruleset = .Global\CodeAnalysis\All-Rules-As-Error.ruleset
+		.Global\CodeAnalysis\Solution-dictionary.xml = .Global\CodeAnalysis\Solution-dictionary.xml
+		.Global\CodeAnalysis\Solution-suppressions.cs = .Global\CodeAnalysis\Solution-suppressions.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{CD804834-ED8C-48D0-AEC5-6D1B4E85F685}"
+	ProjectSection(SolutionItems) = preProject
+		..\ReadMe.md = ..\ReadMe.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{FA05C607-2A9E-4801-AA26-D9E2D5FAA6D2}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{871D176C-D46D-48D8-A971-D7DF530CB7D0}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{5E3A3702-005A-46A0-8198-E989648DF959}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Publish-Debug|Any CPU = Publish-Debug|Any CPU
+		Publish-Release|Any CPU = Publish-Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Publish-Debug|Any CPU.ActiveCfg = Publish-Debug|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Publish-Debug|Any CPU.Build.0 = Publish-Debug|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Publish-Release|Any CPU.ActiveCfg = Publish-Release|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Publish-Release|Any CPU.Build.0 = Publish-Release|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E3A3702-005A-46A0-8198-E989648DF959}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E8B99074-0933-4BE3-8659-A579CCF3334C} = {C5918E86-D166-42B1-B6EF-6AD1685B1EB0}
+		{CD804834-ED8C-48D0-AEC5-6D1B4E85F685} = {C5918E86-D166-42B1-B6EF-6AD1685B1EB0}
+		{FA05C607-2A9E-4801-AA26-D9E2D5FAA6D2} = {C5918E86-D166-42B1-B6EF-6AD1685B1EB0}
+		{871D176C-D46D-48D8-A971-D7DF530CB7D0} = {C5918E86-D166-42B1-B6EF-6AD1685B1EB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B6F9672-0E24-4B9D-A21C-A3C222544F5E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Rules" ToolsVersion="15.0">
+	<Include Action="Default" Path="..\..\.Global\CodeAnalysis\All-Rules-As-Error.ruleset" />
+	<Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+		<Rule Id="CA1014" Action="None" />
+		<Rule Id="CA1016" Action="None" />
+		<Rule Id="CA1017" Action="None" />
+		<Rule Id="CA1303" Action="None" />
+		<Rule Id="CA2210" Action="None" />
+	</Rules>
+	<Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Features" RuleNamespace="Microsoft.CodeAnalysis.CSharp.Features">
+		<Rule Id="IDE0008" Action="None" />
+		<Rule Id="IDE0011" Action="None" />
+		<!--
+		<Rule Id="IDE0009" Action="None" />
+		<Rule Id="IDE0046" Action="None" />
+		-->
+	</Rules>
+</RuleSet>
