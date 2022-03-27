@@ -13,19 +13,19 @@ namespace Application
 {
 	internal class Program
 	{
-		#region Methods
+		
 
 		private static bool IsPublishMode(string[] arguments)
 		{
 			var publish = arguments != null && arguments.Contains("publish", StringComparer.OrdinalIgnoreCase);
 
-			// ReSharper disable InvertIf
+			
 			if(!publish)
 			{
 				if(bool.TryParse(ConfigurationManager.AppSettings["Publish"], out var parsedPublish))
 					publish = parsedPublish;
 			}
-			// ReSharper restore InvertIf
+			
 
 			return publish;
 		}
@@ -44,7 +44,7 @@ namespace Application
 				if(IsPublishMode(arguments))
 				{
 					Console.ForegroundColor = ConsoleColor.Cyan;
-					Console.WriteLine("Publishing (press \"Enter\", without typing a message, to exit)");
+					Console.WriteLine($"Ready for Publishing - Write Your *Message*, EXIT APP WITH: Enter");
 					Console.WriteLine("*************************************************************");
 					Console.ResetColor();
 
@@ -64,7 +64,7 @@ namespace Application
 					}
 				}
 				else
-				{
+				{	/* Subscriber Mode */
 					eventBroker.EventMissed += (sender, e) => { WriteEventMissed(e); };
 					eventBroker.EventReceived += (sender, e) => { WriteEventReceived(e); };
 
@@ -106,16 +106,22 @@ namespace Application
 			if(eventId != null)
 				Console.WriteLine(" Event-id         : " + eventId);
 
-			if(parameter != null)
-				Console.WriteLine(" Parameter        : " + parameter);
+            if (parameter != null)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(" Parameter        : " + parameter);
+                Console.ResetColor();
+            }
 
-			if(raiserId != null)
+            if(raiserId != null)
 				Console.WriteLine(" Raiser-id        : " + raiserId);
 
-			if(sent != null)
-				Console.WriteLine(" Sent             : " + sent);
+            if (sent != null)
+            {
+                Console.WriteLine(" Sent             : " + sent);
+            }
 
-			if(sequenceNumber != null)
+            if(sequenceNumber != null)
 				Console.WriteLine(" Sequence-number  : " + sequenceNumber);
 
 			if(!string.IsNullOrEmpty(serverName))
@@ -166,6 +172,6 @@ namespace Application
 			Console.ResetColor();
 		}
 
-		#endregion
+		
 	}
 }
