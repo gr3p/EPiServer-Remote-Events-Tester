@@ -1,4 +1,5 @@
-# EPiServer-Remote-Events-Broker
+# EPiServer-Remote-Events-Tester
+
 
 This is a project, application, for testing EPiServer remote events.
 
@@ -42,14 +43,15 @@ If you are logged in as an administrator with your work-domain-account, but offl
 
 ## Build-configurations
 
-There are four build-configurations:
 
-- Debug
-- Publish-Debug
-- Publish-Release
-- Release
+- Publish-Debug (subscriber)
+- Publish-Release (publisher)
+
 
 App.config transforms are made on build by using [SlowCheetah](https://github.com/Microsoft/slow-cheetah/). So by changing build-configuration before running it from Visual Studio you can run it both in publish- or subscribe-mode.
+
+## Configurations
+App.publish.release etc contains configs for both SOAP:UDP and TCP tests.
 
 ## Notes
 
@@ -58,3 +60,5 @@ If you get SlowCheetah-errors when building the solution, like:
 - \packages\Microsoft.VisualStudio.SlowCheetah.3.1.66\build\Microsoft.VisualStudio.SlowCheetah.targets(68,5): error MSB4096: The item "Build\Build.props" in item list "_NoneWithTargetPath" does not define a value for metadata "TransformOnBuild"....
 
 You can try to change the build-configuration and build again. Then go back to the previous build-configuration and build again.
+
+Credits to Hans Kindberg for making the origin of this.
